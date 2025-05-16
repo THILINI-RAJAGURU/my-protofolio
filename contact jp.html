@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>お問い合わせ</title>
+  <link rel="stylesheet" href="contact jp .css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <style>
+    /* Toast Style (optional) */
+    
+  </style>
+</head>
+<body>
+
+<section class="contact-section">
+  <div class="contact-card">
+    <h2>話しましょう</h2>
+    <p>ご質問やコラボレーションのアイデアがありましたら、お気軽にご連絡ください!</p>
+    <form id="contactForm" onsubmit="sendEmail(event)">
+      <div class="input-group">
+        <input type="text" name="name" required />
+        <label>お名前</label>
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" required />
+        <label>メールアドレス</label>
+      </div>
+      <div class="input-group">
+        <textarea name="message" rows="5" required></textarea>
+        <label>メッセージ</label>
+      </div>
+      <button type="submit" class="submit-btn">メッセージを送信</button>
+    </form>
+  </div>
+</section>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<script>
+  // Initialize EmailJS
+  emailjs.init("zZD_1-w90CzpoB-oA"); // Replace with your EmailJS Public Key
+
+  function sendEmail(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_1mef5d9', 'template_pp3j1aq', '#contactForm')
+      .then(() => {
+        showToast("✅ Message sent successfully!", "#4caf50");
+        document.getElementById('contactForm').reset();
+      }, (error) => {
+        console.error("EmailJS Error:", error);
+        showToast("❗Error sending message. Please try again later.", "#f44336");
+      });
+  }
+
+  function showToast(message, color) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.style.backgroundColor = color;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>

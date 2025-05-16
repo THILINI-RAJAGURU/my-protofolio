@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+header {
+  background-color: #3498db;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar .logo a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style-type: none;
+}
+
+.navbar .nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #2980b9;
+}
+
+/* Profile Header */
+.profile-header {
+  margin-top: 80px; /* To avoid header overlapping */
+  background-color: #fff;
+  padding: 60px 20px 40px;
+  text-align: center;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.profile-text h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.profile-text p {
+  max-width: 600px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.skill-category {
+  margin-bottom: 40px;
+}
+
+.skill-category h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  line-height: 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: width 1s ease-in-out;
+}
+
+/* Footer Section */
+footer {
+  background-color: #34495e;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .footer-content ul {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+footer .footer-content ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+footer .footer-content ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .footer-content ul li a:hover {
+  color: #3498db;
+}
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-text h1 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .skill-category h2 {
+    font-size: 20px;
+  }
+}
+
+
